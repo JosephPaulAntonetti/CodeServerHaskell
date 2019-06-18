@@ -1,0 +1,2 @@
+mkdir -p ${VSCODE_EXTENSIONS}/$2
+curl -JLs --retry 5 https://marketplace.visualstudio.com/_apis/public/gallery/publishers/$1/vsextensions/$2/latest/vspackage | bsdtar --strip-components=1 -xf - -C ${VSCODE_EXTENSIONS}/$2 extension
